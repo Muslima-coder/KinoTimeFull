@@ -42,7 +42,7 @@ const Hero = () => {
               </section>
 
                 <div className='absolute xl:pr-170 text-center xl:text-start mx-auto sm:!mx-0 '>
-                <h2 className="sm:text-[35px] text-[24px] font-bold text-center sm:text-start w-auto sm:w-[500px] mb-[40px]">
+                <h2 className="sm:text-[35px] text-[24px] font-bold text-center sm:text-start w-[80%] sm:w-[500px] mb-[40px]">
                   {movie.title}
                 </h2>
 

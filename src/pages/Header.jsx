@@ -28,8 +28,8 @@ function Header() {
 
   return (
     <header className="fixed z-20 bg-[#211e27] w-full py-2 px-4">
-    <div className=' containers flex justify-around xl:justify-between  items-center '>
-      <div className="flex items-center gap-7">
+    <div className=' containers flex justify-between sm:justify-around xl:justify-between  items-center '>
+      <div className="flex items-center gap-1 sm:gap-7">
         <div className="block xl:hidden">
         <ModalHeader/>
         </div>
@@ -39,7 +39,7 @@ function Header() {
         </div>
       </div>
 
-      <div className='flex gap-2 items-center '>
+      <div className='flex gap-[3px] sm:gap-2 items-center '>
         {ButtonsList.map(item => <button key={item.id} className="flex justify-center rounded-[12px] items-center w-[53px] h-[53px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"> {item.icon}</button> )}
 
         <div className="relative">
