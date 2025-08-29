@@ -1,0 +1,16 @@
+.content-wrapper {
+    padding: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+    font-size:xx-large;
+    
+  }
+  
+  .movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }

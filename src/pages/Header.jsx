@@ -1,0 +1,56 @@
+import { useState } from "react";
+import { SearchSvg, PromocodIcon, NotificationIcon, RegisterIcon } from '../assets/icons'
+import { SiteLogo } from '../assets/images'
+import { NavLink } from "react-router-dom";
+
+function Header() {
+  const langs = ["O'zbekcha", "Русский", "English"];
+  const [selected, setSelected] = useState("O'zbekcha");
+  const [open, setOpen] = useState(false);
+
+  const LinkList = [
+  { id: 1, text: "Bosh sahifa", to: "/" },
+  { id: 2, text: "TV", to: "/tv" },
+  { id: 3, text: "Filmlar", to: "/filmlar" },
+  { id: 4, text: "Seriallar", to: "/seriallar" },
+  { id: 5, text: "Multfilmlar", to: "/multfilmlar" },
+  { id: 6, text: "Anime", to: "/anime" },
+  { id: 7, text: "Jonli efir", to: "/jonliefir" },
+  { id: 8, text: "Tariflar", to: "/tariflar" },
+  ];
+
+  const ButtonsList = [
+  { id: 1, icon:<SearchSvg/> },
+  { id: 2, icon:<PromocodIcon/> },
+  { id: 3, icon:<NotificationIcon/> },
+  ]
+
+  return (
+    <header className="fixed z-20 bg-[#211e27] w-full py-2 px-4">
+    <div className=' containers flex justify-between  items-center '>
+        <div className="cursor-pointer text-center flex gap-[14px]">
+        <img src={SiteLogo} alt="logo" width={66} height={33} />
+        {LinkList.map(item => <NavLink key={item.id} to={item.to} className={({ isActive }) => isActive ? "text-white font-normal text-[16px]" : "text-[#878787] hover:text-white duration-300"}>{item.text}</NavLink>)}
+        </div>
+
+      <div className='flex gap-2 items-center '>
+        {ButtonsList.map(item => <button key={item.id} className="flex justify-center rounded-[12px] items-center w-[53px] h-[53px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"> {item.icon}</button> )}
+
+        <div className="relative">
+          <button onClick={() => setOpen(!open)} className="flex justify-center rounded-[12px] items-center w-[58px] h-[58px] bg-[#2a2a29] hover:bg-[#373837] text-white" >
+            {selected === "O'zbekcha" ? "UZ" : selected === "Русский" ? "RU" : "EN"}
+          </button>
+          {open && (
+            <div className="absolute z-50 right-0 mt-2 bg-[#2a2a29] rounded-[8px] overflow-hidden">
+              {langs.map((l) => (
+                <div key={l} onClick={() => { setSelected(l); setOpen(false); }} className="px-4 py-2 text-white hover:bg-[#373837] cursor-pointer"> {l}  </div> ))}
+              </div>)}
+        </div>
+        <button className="flex justify-center rounded-[12px] items-center w-[58px] h-[58px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><RegisterIcon/> </button> 
+      </div>
+    </div>
+    </header>
+  )
+}
+
+export default Header

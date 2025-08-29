@@ -1,0 +1,32 @@
+body {
+  background: rgb(23,24,24);
+}
+
+.movie-card {
+  width: 229px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+} 
+
+/* Poster */
+.movie-poster {
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  position: absolute;
+  background: rgba(30, 30, 30, 0.85);
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-info {
+  opacity: 1;
+}
