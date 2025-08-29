@@ -10,7 +10,7 @@ const ModalHeader = () => {
       <Button 
         type="primary" 
         shape="default" 
-        className="!w-[50px] !h-[48px] !text-[25px] !bg-[#2a2a29]"
+        className="sm:!w-[50px] sm:!h-[48px] sm:!text-[25px] !w-[45px]  !h-[45px] !text-[23px]  !bg-[#2a2a29]"
         icon={<MenuOutlined/>} 
         onClick={() => setOpen(true)} 
       />
