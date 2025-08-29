@@ -30,7 +30,7 @@ export default function ContentList() {
   }, []);
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper containers">
       {lists.map(list => (
         <div key={list.id} className="content-section text-[#fff] font-black">
           <h3>{list.name}</h3>

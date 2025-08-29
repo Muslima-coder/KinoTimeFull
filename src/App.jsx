@@ -38,7 +38,7 @@ const App = () => {
     <Header/>
     <main>
     <Hero/>
-    <ExpectedMovie/>
+    {/* <ExpectedMovie/> */}
     </main>
     </>
   )

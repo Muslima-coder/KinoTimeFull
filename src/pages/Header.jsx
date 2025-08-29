@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SearchSvg, PromocodIcon, NotificationIcon, RegisterIcon } from '../assets/icons'
 import { SiteLogo } from '../assets/images'
 import { NavLink } from "react-router-dom";
+import { ModalHeader } from "../components";
 
 function Header() {
   const langs = ["O'zbekcha", "Русский", "English"];
@@ -27,11 +28,16 @@ function Header() {
 
   return (
     <header className="fixed z-20 bg-[#211e27] w-full py-2 px-4">
-    <div className=' containers flex justify-between  items-center '>
-        <div className="cursor-pointer text-center flex gap-[14px]">
+    <div className=' containers flex justify-around xl:justify-between  items-center '>
+      <div className="flex items-center gap-7">
+        <div className="block xl:hidden">
+        <ModalHeader/>
+        </div>
         <img src={SiteLogo} alt="logo" width={66} height={33} />
+        <div className="cursor-pointer text-center hidden xl:flex gap-[14px]">
         {LinkList.map(item => <NavLink key={item.id} to={item.to} className={({ isActive }) => isActive ? "text-white font-normal text-[16px]" : "text-[#878787] hover:text-white duration-300"}>{item.text}</NavLink>)}
         </div>
+      </div>
 
       <div className='flex gap-2 items-center '>
         {ButtonsList.map(item => <button key={item.id} className="flex justify-center rounded-[12px] items-center w-[53px] h-[53px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"> {item.icon}</button> )}
