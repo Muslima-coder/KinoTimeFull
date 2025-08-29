@@ -33,17 +33,17 @@ function Header() {
         <div className="block xl:hidden">
         <ModalHeader/>
         </div>
-        <img src={SiteLogo} alt="logo" width={66} height={33} />
+        <img className="sm:w-[66px] sm:h-[33px] w-[40px] h-[28px]" src={SiteLogo} alt="logo" width={66} height={33} />
         <div className="cursor-pointer text-center hidden xl:flex gap-[14px]">
         {LinkList.map(item => <NavLink key={item.id} to={item.to} className={({ isActive }) => isActive ? "text-white font-normal text-[16px]" : "text-[#878787] hover:text-white duration-300"}>{item.text}</NavLink>)}
         </div>
       </div>
 
       <div className='flex gap-[3px] sm:gap-2 items-center '>
-        {ButtonsList.map(item => <button key={item.id} className="flex justify-center rounded-[12px] items-center w-[53px] h-[53px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"> {item.icon}</button> )}
+        {ButtonsList.map(item => <button key={item.id} className="flex justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"> {item.icon}</button> )}
 
         <div className="relative">
-          <button onClick={() => setOpen(!open)} className="flex justify-center rounded-[12px] items-center w-[58px] h-[58px] bg-[#2a2a29] hover:bg-[#373837] text-white" >
+          <button onClick={() => setOpen(!open)} className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[35px] h-[35px]  bg-[#2a2a29] hover:bg-[#373837] text-white" >
             {selected === "O'zbekcha" ? "UZ" : selected === "Русский" ? "RU" : "EN"}
           </button>
           {open && (
@@ -52,7 +52,7 @@ function Header() {
                 <div key={l} onClick={() => { setSelected(l); setOpen(false); }} className="px-4 py-2 text-white hover:bg-[#373837] cursor-pointer"> {l}  </div> ))}
               </div>)}
         </div>
-        <button className="flex justify-center rounded-[12px] items-center w-[58px] h-[58px] bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><RegisterIcon/> </button> 
+        <button className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[35px] h-[35px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><RegisterIcon/> </button> 
       </div>
     </div>
     </header>
