@@ -3,7 +3,7 @@ import { Icon2, Icon3, SearchIMDBIcon } from "../assets/icons";
 export default function MovieCard({ title, poster, year, imdbRating, genre, country }) {
   return (
     <div>
-    <div className="movie-card pt-[20px]">  
+    <div className="movie-card xl:w-[229px] rounded-[10px] overflow-hidden w-[200px] pt-[20px]  flex-shrink-0">  
       <img src={`https://kinotime.world${poster}`} alt={title} className="w-[100%] h-[329px] movie-poster rounded-xl hover:rounded-xl"/>
        <div className="flex flex-col">
         <div className="movie-info absolute bottom-0 left-0 w-full h-[20%] text-[#fff] px-2 flex flex-col justify-center items-center opacity-0 transition-opacity">

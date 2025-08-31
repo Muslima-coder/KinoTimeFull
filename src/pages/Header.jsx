@@ -21,9 +21,8 @@ function Header() {
   ];
 
   const ButtonsList = [
-  { id: 1, icon:<SearchSvg/> },
-  { id: 2, icon:<PromocodIcon/> },
-  { id: 3, icon:<NotificationIcon/> },
+  { id: 1, icon:<PromocodIcon/> },
+  { id: 2, icon:<NotificationIcon/> },
   ]
 
   return (
@@ -40,6 +39,7 @@ function Header() {
       </div>
 
       <div className='flex gap-2 items-center '>
+        <button className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><SearchSvg/> </button> 
         {ButtonsList.map(item => <button key={item.id} className="flex  justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</button> )}
 
         <div className="relative">

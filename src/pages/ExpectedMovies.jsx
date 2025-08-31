@@ -29,13 +29,15 @@ export default function ContentList() {
   }, []);
 
   return (
-    <div className="p-5 pb-10 containers">
+    <div className="xl:p-5  p-30  pb-10 containers">
       {lists.map(list => (
         <div key={list.id} className="mb-[40px] text-2xl text-[#fff] font-black">
           <h3>{list.name}</h3>
           <Swiper
             spaceBetween={20}
-            slidesPerView={0}
+            slidesPerView={1}
+            mousewheel
+            cssMode
             navigation
             modules={[Navigation]}
             breakpoints={{
@@ -48,7 +50,7 @@ export default function ContentList() {
             }}
           >
             {(data[list.id] || []).map(movie => (
-              <SwiperSlide key={movie.id}>
+              <SwiperSlide key={movie.id} className="!w-[229px]">
                 <MovieCard {...movie} />
               </SwiperSlide>
             ))}
