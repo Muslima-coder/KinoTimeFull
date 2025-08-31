@@ -34,7 +34,7 @@ export default function ContentList() {
         <div key={list.id} className="sm:mb-[40px] mb-[20px] sm:text-2xl text-[16px] text-[#fff] font-black">
           <h3>{list.name}</h3>
           <Swiper
-            spaceBetween={20}
+            spaceBetween={30}
             slidesPerView={1}
             mousewheel
             cssMode
@@ -50,7 +50,7 @@ export default function ContentList() {
             }}
           >
             {(data[list.id] || []).map(movie => (
-              <SwiperSlide key={movie.id} className="!xl:w-[229px] !w-[200px]">
+              <SwiperSlide key={movie.id} className="!w-[229px]">
                 <MovieCard {...movie} />
               </SwiperSlide>
             ))}
