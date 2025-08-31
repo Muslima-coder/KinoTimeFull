@@ -1,5 +1,3 @@
-import React from "react";
-import "../style/MovieCard.css";
 import { Icon2, Icon3, SearchIMDBIcon } from "../assets/icons";
 
 export default function MovieCard({ title, poster, year, imdbRating, genre, country }) {

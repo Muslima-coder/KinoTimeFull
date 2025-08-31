@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import "../style/ExpectedMovies.css";
+import  { useEffect, useState } from "react";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -30,9 +29,9 @@ export default function ContentList() {
   }, []);
 
   return (
-    <div className="content-wrapper containers">
+    <div className="p-5 pb-10 containers">
       {lists.map(list => (
-        <div key={list.id} className="content-section text-[#fff] font-black">
+        <div key={list.id} className="mb-[40px] text-2xl text-[#fff] font-black">
           <h3>{list.name}</h3>
           <Swiper
             spaceBetween={20}
