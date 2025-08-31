@@ -6,6 +6,10 @@ const ModalHeader = () => {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
 
+  // Ekran widthiga qarab responsiv qilish
+  const isMobile = window.innerWidth < 640; // sm: 640px
+  const modalWidth = isMobile ? "100vw" : "40vw";
+
   const menuItems = [
     { title: "Bosh sahifa", active: true },
     { title: "TV" },
@@ -27,7 +31,6 @@ const ModalHeader = () => {
         onClick={() => setOpen(true)}
       />
 
-      {/* Modal */}
       <Modal
         open={open}
         footer={null}
@@ -41,11 +44,11 @@ const ModalHeader = () => {
           padding: 0,
           height: "100vh",
         }}
-        width="40vw"
+        width={modalWidth} // responsiv width
         styles={{
           content: {
-            height: "100vh",     
-            background: "#1d1f1e", 
+            height: "100vh",
+            background: "#1d1f1e",
             margin: 0,
             padding: 0,
             borderRadius: 0,
@@ -61,7 +64,9 @@ const ModalHeader = () => {
       >
         {/* Header */}
         <div className="p-2 bg-[#292a29] border-b border-neutral-800 text-center text-white text-[18px] font-medium">
-          <button onClick={() => setOpen(false)} className="cursor-pointer">Yopish</button>
+          <button onClick={() => setOpen(false)} className="cursor-pointer">
+            Yopish
+          </button>
         </div>
 
         {/* Menu */}
@@ -70,7 +75,9 @@ const ModalHeader = () => {
             <div
               key={idx}
               className={`flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer ${
-                item.active ? "bg-[#273c23] text-white" : "bg-[#2a2a2a] text-white"
+                item.active
+                  ? "bg-[#273c23] text-white"
+                  : "bg-[#2a2a2a] text-white"
               }`}
             >
               <span>{item.title}</span>
