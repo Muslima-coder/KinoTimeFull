@@ -31,7 +31,7 @@ export default function ContentList() {
   return (
     <div className="xl:p-5  p-30  pb-10 containers">
       {lists.map(list => (
-        <div key={list.id} className="mb-[40px] text-2xl text-[#fff] font-black">
+        <div key={list.id} className="sm:mb-[40px] mb-[20px] sm:text-2xl text-[16px] text-[#fff] font-black">
           <h3>{list.name}</h3>
           <Swiper
             spaceBetween={20}
@@ -50,7 +50,7 @@ export default function ContentList() {
             }}
           >
             {(data[list.id] || []).map(movie => (
-              <SwiperSlide key={movie.id} className="!w-[229px]">
+              <SwiperSlide key={movie.id} className="!xl:w-[229px] !w-[200px]">
                 <MovieCard {...movie} />
               </SwiperSlide>
             ))}
