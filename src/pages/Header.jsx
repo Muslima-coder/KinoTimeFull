@@ -26,7 +26,7 @@ function Header() {
   ]
 
   return (
-    <header className="fixed z-5  backdrop-blur-md w-full py-2 px-4">
+    <header className="fixed z-10  backdrop-blur-sm w-full py-2 px-4">
     <div className=' containers flex justify-between sm:justify-around xl:justify-between  items-center '>
       <div className="flex items-center gap-2 sm:gap-7">
         <div className="block xl:hidden">
@@ -38,16 +38,16 @@ function Header() {
         </div>
       </div>
 
-      <div className='flex gap-2 items-center '>
+      <div className='flex gap-2 items-center  '>
         <button className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><SearchSvg/> </button> 
         {ButtonsList.map(item => <button key={item.id} className="flex  justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</button> )}
 
         <div className="relative">
-          <button onClick={() => setOpen(!open)} className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] text-white" >
+          <button onClick={() => setOpen(!open)} className=" flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] text-white" >
             {selected === "O'zbekcha" ? "UZ" : selected === "Русский" ? "RU" : "EN"}
           </button>
           {open && (
-            <div className="absolute z-50 right-0 mt-2 bg-[#2a2a29] rounded-[8px] overflow-hidden">
+            <div className="absolute  z-[9999] right-0 mt-2 bg-[#2a2a29] rounded-[8px] overflow-hidden">
               {langs.map((l) => (
                 <div key={l} onClick={() => { setSelected(l); setOpen(false); }} className="px-4 py-2 text-white hover:bg-[#373837] cursor-pointer"> {l}  </div> ))}
               </div>)}
