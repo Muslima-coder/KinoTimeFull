@@ -29,7 +29,7 @@ export default function ContentList() {
   }, []);
 
   return (
-    <div className="xl:p-5  sm:p-30 p-2 pb-10 containers">
+    <div className="xl:p-5  sm:p-47 p-2 pb-10 containers">
       {lists.map(list => (
         <div key={list.id} className="sm:mb-[40px] mb-[20px] sm:text-2xl text-[16px] text-[#fff] font-black">
           <h3>{list.name}</h3>
