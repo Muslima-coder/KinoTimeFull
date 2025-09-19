@@ -1,6 +1,6 @@
-import SiteLogo from "../images/site-logo.svg"
-import TVPrefix from "../images/TVPrefix.svg"
-import SiteLogoFooter from "./SiteLogo.png"
+import SiteLogo from "./Sitelogo.png"
+import TVPrefix from "./TVPrefix.svg"
+import SiteLogoFooter from "./site-logo.svg"
 
 
 export {SiteLogo, TVPrefix, SiteLogoFooter}
