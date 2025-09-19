@@ -157,9 +157,9 @@ const Footer = () => {
             <p className="text-[#8e8e8d] font-normal ">© 2015 - 2025 iTV (LLC ALPHAZET TECHNOLOGIES).v1.44.0</p>
           </div>
           <div className="text-[#8e8e8d] flex gap-[30px]">
-            <option value="Uzbek">O'zbekcha</option>
-            <option value="Russian">Русский</option>
-            <option value="English">English</option>
+            <option className='cursor-pointer' value="Uzbek">O'zbekcha</option>
+            <option className='cursor-pointer' value="Russian">Русский</option>
+            <option className='cursor-pointer' value="English">English</option>
           </div>
         </div>
       </div>
