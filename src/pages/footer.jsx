@@ -38,7 +38,7 @@ const Footer = () => {
 
   return (
     <div className="!bg-[#1D1F1E]">
-      <div className='containers  lg:px-10 '>
+      <div className='containers  lg:px-10 p-10'>
       <div className="border-b-[1px] border-[#242525] w-full  flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
 
         {/* Chap tarafdagi kontent (About Us va Catalog wrapperlari) */}
@@ -118,7 +118,7 @@ const Footer = () => {
              </div>
           </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:justify-start justify-center lg:text-start text-center">
               <Title title={"Ijtimoiy tarmoqlar"}/>
 
               <div className=" flex items-center gap-2 flex-wrap">
@@ -152,7 +152,7 @@ const Footer = () => {
 
 
       <div className="!py-5">
-        <div className="lg:flex-row flex-col flex items-center  justify-between">
+        <div className="lg:flex-row flex-col flex items-center justify-center lg:justify-between">
           <div>
             <p className="text-[#8e8e8d] font-normal ">© 2015 - 2025 iTV (LLC ALPHAZET TECHNOLOGIES).v1.44.0</p>
           </div>
