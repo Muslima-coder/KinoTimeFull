@@ -118,7 +118,7 @@ const Footer = () => {
              </div>
           </div>
 
-            <div className="flex flex-col lg:justify-start justify-center lg:text-start text-center">
+            <div className="flex flex-col lg:justify-start justify-center lg:text-start text-center lg:mx-0 mx-auto">
               <Title title={"Ijtimoiy tarmoqlar"}/>
 
               <div className=" flex items-center gap-2 flex-wrap">
@@ -154,7 +154,7 @@ const Footer = () => {
       <div className="!py-5">
         <div className="lg:flex-row flex-col flex items-center justify-center lg:justify-between">
           <div>
-            <p className="text-[#8e8e8d] font-normal ">© 2015 - 2025 iTV (LLC ALPHAZET TECHNOLOGIES).v1.44.0</p>
+            <p className="text-[#8e8e8d] font-normal lg:text-start text-center ">© 2015 - 2025 iTV (LLC ALPHAZET TECHNOLOGIES).v1.44.0</p>
           </div>
           <div className="text-[#8e8e8d] flex gap-[30px]">
             <option className='cursor-pointer' value="Uzbek">O'zbekcha</option>
