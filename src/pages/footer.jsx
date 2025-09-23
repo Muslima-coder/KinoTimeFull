@@ -42,15 +42,15 @@ const Footer = () => {
       <div className="border-b-[1px] border-[#242525] w-full  flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
 
         {/* Chap tarafdagi kontent (About Us va Catalog wrapperlari) */}
-         <div className='flex lg:flex-row lg:justify-start justify-center lg:mx-0 mx-auto flex-col items-center gap-[70px]'>
-           <div>
+         <div className='flex lg:flex-row lg:justify-start justify-center  flex-col items-center gap-[70px]'>
+           <div className='lg:mx-0 mx-auto lg:text-start text-center'>
             <Title title={"Biz haqimizda"}/>
             <div className="text-[#868787] font-bold text-[14px] space-y-[3px]">
               {AboutUsList.map(item => <Content key={item.id} contentText={item.text} />)}
             </div>
           </div>
 
-          <div>
+          <div className='lg:mx-0 mx-auto lg:text-start text-center'>
             <Title title={"Katalog"}/>
             <div className="flex gap-[70px]">
               <div className="text-[#868787] font-bold text-[14px] flex flex-col gap-[3px]">
