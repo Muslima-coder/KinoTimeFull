@@ -67,7 +67,7 @@ const Footer = () => {
 
          {/* O'ng tarafdagi kontent (About Us va Catalog wrapperlari) */}
 
-          <div className='flex gap-8 items-center'>
+          <div className='flex lg:flex-row flex-col gap-8 items-center'>
           <div className="flex flex-col gap-[6px]">
             <Title title={"Qo'llab-quvvatlash"}/>
             <LinkBtn classList={'!w-[195px]'} linkHref={'#'}>
