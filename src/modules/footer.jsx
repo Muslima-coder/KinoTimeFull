@@ -40,7 +40,7 @@ const Footer = () => {
   return (
    <div className="!bg-[#1D1F1E] !px-0 sm:!px-[50px] md:!px-[10px] w-full">
     <div className="containers">
-      <div className="lg:w-full w-[600px] border-b-[1px] border-[#242525] flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
+      <div className="w-full border-b-[1px] border-[#242525] flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
 
         {/* Chap tarafdagi kontent (About Us va Catalog wrapperlari) */}
          <div className=' flex lg:flex-row lg:justify-start justify-center flex-col items-center gap-[70px] lg:mx-0 mx-auto '>
