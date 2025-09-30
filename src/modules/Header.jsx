@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { SearchSvg, PromocodIcon, NotificationIcon, RegisterIcon } from '../assets/icons'
 import { SiteLogoFooter } from '../assets/images'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ModalHeader } from "../components";
 
 function Header() {
+  const navigate = useNavigate()
   const langs = ["O'zbekcha", "Русский", "English"];
   const [selected, setSelected] = useState("O'zbekcha");
   const [open, setOpen] = useState(false);
@@ -39,8 +40,8 @@ function Header() {
       </div>
 
       <div className='flex gap-2 items-center  '>
-        <button className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><SearchSvg/> </button> 
-        {ButtonsList.map(item => <button key={item.id} className="flex  justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</button> )}
+        <button onClick={() => navigate('/searchPart')} className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><SearchSvg/> </button> 
+        {ButtonsList.map(item => <button key={item.id} className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</button> )}
 
         <div className="relative">
           <button onClick={() => setOpen(!open)} className=" flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] text-white" >
@@ -52,7 +53,7 @@ function Header() {
                 <div key={l} onClick={() => { setSelected(l); setOpen(false); }} className="px-4 py-2 text-white hover:bg-[#373837] cursor-pointer"> {l}  </div> ))}
               </div>)}
         </div>
-        <button className="flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><RegisterIcon/> </button> 
+        <button className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><RegisterIcon/> </button> 
       </div>
     </div>
     </header>

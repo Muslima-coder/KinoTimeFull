@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { CancelIcon } from "../assets/icons";
-import { MovieCardSearch } from "../components";
+import { CancelIcon } from "../../assets/icons";
+import { MovieCardSearch } from "../../components";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-const SearchPart = () => {
+const SearchPage = () => {
   const [allMovies, setAllMovies] = useState([])
   const [movies, setMovies] = useState([])
   const [searchValue, setSearchValue] = useState("");
@@ -44,7 +44,7 @@ const SearchPart = () => {
 
 
   return (
-    <div className=" px-[35px] flex flex-col justify-center items-center py-[20px] bg-[rgb(23,24,24)]">
+    <div className="h-[600px] px-[35px] flex flex-col justify-center items-center py-[20px] bg-[rgb(23,24,24)]">
       {/* search input */}
       <label className="flex items-center justify-between w-full mx-auto py-[16px] px-[24px] rounded-[8px] bg-[rgb(29,31,30)]">
         <input autoComplete="off" className="searchInput outline-none text-[16px] text-[rgb(255,255,255)] border-none bg-transparent flex-1" type="text" name="search" placeholder="Filmlar va seriallar" value={searchValue} onChange={handleChange} onKeyDown={handleKeyDown}/>
@@ -91,4 +91,4 @@ const SearchPart = () => {
   );
 };
 
-export default SearchPart;
+export default SearchPage;

@@ -42,12 +42,12 @@ body {
   color: #fff;
   padding: 0;
   position: relative;
+  height: 100vh;
 }
 
 .containers{
   max-width: 1300px;
   margin: 0 auto;
-  /* overflow: hidden; */
 }
 
 
@@ -177,3 +177,52 @@ body {
   border-radius: 0 !important;
 }
 
+
+/* Tv Part select */
+.ant-select-selector{
+  background-color: #212322 !important;
+  outline: none !important;
+  border: #2c2d2d 2px solid !important;
+  border-radius: 15px !important;
+  height: 60px !important;
+  color:  #96a49f !important;
+}
+
+.ant-select-arrow{
+ margin-top: 10px !important;
+ color:  #5d5e5e !important;
+ font-size: medium !important;
+}
+
+
+.ant-select-selection-item {
+  color: #96a49f !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #96a49f !important;
+  font-size: medium !important;
+}
+
+.ant-select-selection-search-input {
+  color: #96a49f !important;
+}
+
+.ant-select-selection-search-input::placeholder {
+  color: #96a49f !important;
+}
+
+.ant-select-dropdown {
+  background-color: #212322 !important;
+}
+
+.ant-select-item-option {
+  color: #96a49f !important;
+  background-color: #212322 !important;
+}
+
+.ant-select-item-option-active {
+  background-color: #424242 !important; 
+}
+
+/* Tv Part select */

@@ -1,13 +1,12 @@
-import Header from "./Header"
-import Hero from "./Hero"
-import ExpectedMovie from "./ExpectedMovies"
+import Hero from "./MainPagePart/Hero"
+import ExpectedMovie from "./MainPagePart/ExpectedMovies"
 
-import SearchPage from "./SearchPart"
-import SinglePage from "./SingleMovie"
+import SearchPage from "./MainPagePart/SearchPage"
+import SinglePage from "./MainPagePart/SingleMovie"
 
-import Footer from "./footer"
-
-
+import TvPart from "./TvPart"
+import FilmlarPart from "./FilmlarPart"
 
 
-export {Header, Hero, ExpectedMovie, SearchPage, SinglePage, Footer}
+
+export { Hero, ExpectedMovie, SearchPage, SinglePage, TvPart, FilmlarPart}

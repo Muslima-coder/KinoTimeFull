@@ -1,18 +1,7 @@
-
-import { ExpectedMovie, Footer, Header, Hero } from "./pages"
-
+import DashboardRoutes from "./routes/DashboardRoutes"
 
 const App = () => {
-  return (
-    <>
-    <Header/>
-    <main>
-    <Hero/>
-    <ExpectedMovie/>
-    </main>
-    <Footer/>
-    </>
-  )
+  return <DashboardRoutes/>
 }
 
 export default App

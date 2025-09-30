@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 import React, { useEffect, useState } from "react";
-import { CopyIcon, FacebookIcon, ImdbIcon, LogoKIcon, LogoTvIcon, ShareIcon, TelegramIcon } from "../assets/icons";
+import { CopyIcon, FacebookIcon, ImdbIcon, LogoKIcon, LogoTvIcon, ShareIcon, TelegramIcon } from "../../assets/icons";
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

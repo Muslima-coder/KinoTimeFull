@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { AppGallery, AppleIcon, FacebookPage, GallaxyStore, GoogleIcon, InstagramPage, SmartTv, TelegramIconF, TelegramPage, TelephoneIcon, YoutubePage} from '../assets/icons'
 import { TVPrefix } from '../assets/images'
 
@@ -7,8 +8,8 @@ const Footer = () => {
     return <p className="text-white font-bold text-[18px] !mb-[10px] ">{title}</p>
   }
 
-  const Content = ({contentText}) => {
-      return <p className="text-[#868787] cursor-pointer hover:text-white duration-300 ">{contentText}</p>  
+  const Content = ({contentText, to}) => {
+      return <NavLink to={to} className="text-[#868787] cursor-pointer hover:text-white duration-300 ">{contentText}</NavLink>  
     }
 
   const  LinkBtn = ({linkHref, children, classList}) => {
@@ -16,49 +17,49 @@ const Footer = () => {
   }
 
   const AboutUsList = [
-    {id:1, text:"Kontaktlar"},
-    {id:2, text:"Qo'llab-quvvatlash"},
-    {id:3, text:"Tariflar"},
-    {id:4, text:"Hamkorlar"},
+    {id:1, to:"/kontaktlar", text:"Kontaktlar"},
+    {id:2, to:"/qollabQuvvatlash", text:"Qo'llab-quvvatlash"},
+    {id:3, to:"/tariflar", text:"Tariflar"},
+    {id:4, to:"/hamkorlar", text:"Hamkorlar"},
   ]
 
   const Catalog1 = [
-    {id:1, text:"TV"},
-    {id:2, text:"Filmlar"},
-    {id:3, text:"Seriallar"},
-    {id:4, text:"Multfilmlar"},
+    {id:1, to:"/tv", text:"TV"},
+    {id:2, to:"/filmlar", text:"Filmlar"},
+    {id:3, to:"/seriallar", text:"Seriallar"},
+    {id:4, to:"/multfilmlar", text:"Multfilmlar"},
   ]
   const Catalog2 = [
-    {id:1, text:"Anime"},
-    {id:2, text:"Live"},
-    {id:3, text:"Uz video"},
-    {id:4, text:"iTrack.uz"},
+    {id:1, to:"/anime", text:"Anime"},
+    {id:2, to:"/jonliEfir", text:"Live"},
+    {id:3, to:"/uzVideo", text:"Uz video",},
+    {id:4, to:"/iTrackUz", text:"iTrack.uz"},
   ]
 
 
   return (
-    <div className="!bg-[#1D1F1E] lg:px-0 p-10 ">
-      <div className='containers  lg:px-10'>
-      <div className="border-b-[1px] border-[#242525] w-full  flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
+   <div className="!bg-[#1D1F1E] !px-0 sm:!px-[50px] md:!px-[10px] w-full">
+    <div className="containers">
+      <div className="lg:w-full w-[600px] border-b-[1px] border-[#242525] flex-wrap flex justify-between  items-start gap-5 lg:py-[35px]">
 
         {/* Chap tarafdagi kontent (About Us va Catalog wrapperlari) */}
-         <div className='flex lg:flex-row lg:justify-start justify-center  flex-col items-center gap-[70px] lg:mx-0 mx-auto '>
+         <div className=' flex lg:flex-row lg:justify-start justify-center flex-col items-center gap-[70px] lg:mx-0 mx-auto '>
            <div className='lg:mx-0 mx-auto lg:text-start text-center'>
             <Title title={"Biz haqimizda"}/>
-            <div className="text-[#868787] font-bold text-[14px] space-y-[3px]">
-              {AboutUsList.map(item => <Content key={item.id} contentText={item.text} />)}
+            <div className="text-[#868787] font-bold text-[14px] space-y-[3px] flex flex-col ">
+              {AboutUsList.map(item => <Content to={item.to} key={item.id} contentText={item.text} />)}
             </div>
           </div>
 
           <div className='lg:mx-0 mx-auto lg:text-start text-center'>
             <Title title={"Katalog"}/>
-            <div className="flex gap-[70px]">
+            <div className="flex gap-[70px] ">
               <div className="text-[#868787] font-bold text-[14px] flex flex-col gap-[3px]">
-                {Catalog1.map(item => <Content key={item.id} contentText={item.text}/>)}
+                {Catalog1.map(item => <Content to={item.to} key={item.id} contentText={item.text}/>)}
               </div>
 
              <div className="text-[#868787] font-bold text-[14px] flex flex-col gap-[3px]">
-                {Catalog2.map(item => <Content key={item.id} contentText={item.text}/>)}
+                {Catalog2.map(item => <Content to={item.to} key={item.id} contentText={item.text}/>)}
               </div>
             </div>
           </div>
@@ -169,20 +170,6 @@ const Footer = () => {
 }
 
 export default Footer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

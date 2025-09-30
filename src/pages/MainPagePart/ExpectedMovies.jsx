@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules"; 
-import { MovieCard } from "../components";
+import { MovieCard } from "../../components";
 
 export default function ContentList() {
   const [lists, setLists] = useState([]);
