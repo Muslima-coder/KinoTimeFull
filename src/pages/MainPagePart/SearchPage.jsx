@@ -59,7 +59,7 @@ const SearchPage = () => {
         {/* Swiper */}
         <Swiper
           spaceBetween={10}
-          slidesPerView={7.2}
+          slidesPerView={6}
           navigation
           mousewheel
           cssMode

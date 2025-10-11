@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Modal, Button } from "antd";
 import { MenuOutlined, RightOutlined, DownOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import PATH from "./PATH";
 
 const ModalHeader = () => {
   const [open, setOpen] = useState(false);
@@ -11,15 +13,16 @@ const ModalHeader = () => {
   const modalWidth = isMobile ? "100vw" : "40vw";
 
   const menuItems = [
-    { title: "Bosh sahifa", active: true },
-    { title: "TV" },
-    { title: "Filmlar" },
-    { title: "Seriallar" },
-    { title: "Multfilmlar" },
-    { title: "Anime" },
-    { title: "Live" },
-    { title: "Tariflar" },
+    { id: 1, title: "Bosh sahifa", to: PATH.boshSahifa },
+    { id: 2, title: "TV", to: PATH.tv },
+    { id: 3, title: "Filmlar", to: PATH.filmlar },
+    { id: 4, title: "Seriallar", to: PATH.seriallar },
+    { id: 5, title: "Multfilmlar", to: PATH.multfilmlar },
+    { id: 6, title: "Anime", to: PATH.anime },
+    { id: 7, title: "Live", to: PATH.jonliEfir },
+    { id: 8, title: "Tariflar", to: PATH.tariflar },
   ];
+
 
   return (
     <>
@@ -71,19 +74,23 @@ const ModalHeader = () => {
 
         {/* Menu */}
         <div className="flex-1 overflow-y-auto flex flex-col gap-2 py-3 px-9">
-          {menuItems.map((item, idx) => (
-            <div
-              key={idx}
-              className={`flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer ${
-                item.active
-                  ? "bg-[#273c23] text-white"
-                  : "bg-[#2a2a2a] text-white"
-              }`}
-            >
-              <span>{item.title}</span>
-              <RightOutlined className="text-[12px]" />
-            </div>
-          ))}
+          {menuItems.map((item) => {
+            const isActive = location.pathname === item.to;
+            return (
+              <Link to={item.to} key={item.id}>
+                <div
+                  className={`flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors duration-300 ${
+                    isActive
+                      ? "bg-[#273c23] text-white"
+                      : "bg-[#2a2a2a] text-white hover:bg-[#383838]"
+                  }`}>
+                  <span className="font-medium">{item.title}</span>
+                  <RightOutlined className="text-[12px]" />
+                </div>
+              </Link>
+            );
+          })}
+
 
           {/* More toggle */}
           <div

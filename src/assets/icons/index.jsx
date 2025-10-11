@@ -148,5 +148,15 @@ function ItvIcon(){
 	return <svg xmlnXlink="http://www.w3.org/1999/xlink" width="50" height="20" viewBox="0 0 604 230" fill="none" xmlns="http://www.w3.org/2000/svg" color="#52B038"><path d="M604 0L499.727 229.894H379.754V0h83.482v126.553L520.518 0H604zM0 229.894h83.482L187.756 0h-83.483L0 229.894zM370.207 0H198.894l-37.87 83.415h52.402V230h83.482V83.415h73.299V0z" fill="#47E000"></path></svg>
 }
 
+export const TvPartSelectIcon1 = () => {
+    return(
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.099 16.537H6.062a.898.898 0 110-1.797h12.036a.898.898 0 010 1.797zM18.099 10.9H6.062a.898.898 0 110-1.796h12.036a.898.898 0 010 1.796zM18.099 5.261H6.062a.898.898 0 110-1.796h12.036a.898.898 0 010 1.796zM2.206 5.639a1.206 1.206 0 100-2.412 1.206 1.206 0 000 2.412zM2.206 11.207a1.206 1.206 0 100-2.412 1.206 1.206 0 000 2.412zM2.206 16.776a1.206 1.206 0 100-2.413 1.206 1.206 0 000 2.413z" fill="#FFFFFF"></path></svg>
+    )
+}
+export const TvPartSelectIcon2 = () => {
+    return(
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="radio_svg__lucide radio_svg__lucide-audio-lines"><path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3" stroke="#FFFFFF" fill="none" stroke-width="2px"></path></svg>
+    )
+}
 
 export {TelegramIconF, AppleIcon, TelephoneIcon, SmartTv, GoogleIcon, AppGallery, GallaxyStore, TelegramPage, InstagramPage, FacebookPage, YoutubePage, RefreshIcon, VolumeOfIcon, VolumeOnIcon, ImdbIconF, KinopoiskIcon, ItvIcon}

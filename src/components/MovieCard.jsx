@@ -1,8 +1,8 @@
 import { Icon2, Icon3, SearchIMDBIcon } from "../assets/icons";
 
-export default function MovieCard({ title, poster, year, imdbRating, genre, country }) {
+export default function MovieCard({ title, poster, year, imdbRating, genre, country, classList }) {
   return (
-    <div>
+    <div className={`${classList}`}>
     <div className="movie-card w-[229px]  rounded-[10px] overflow-hidden  pt-[20px]  flex-shrink-0">  
       <img src={`https://kinotime.world${poster}`} alt={title} className="w-[100%] h-[329px] movie-poster rounded-xl hover:rounded-xl"/>
        <div className="flex flex-col">

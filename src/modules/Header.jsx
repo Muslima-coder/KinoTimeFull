@@ -20,14 +20,14 @@ function Header() {
   { id: 7, text: "Jonli efir", to: "/jonliefir" },
   { id: 8, text: "Tariflar", to: "/tariflar" },
   ];
-
+ 
   const ButtonsList = [
   { id: 1, icon:<PromocodIcon/> },
   { id: 2, icon:<NotificationIcon/> },
   ]
 
   return (
-    <header className="fixed z-10  backdrop-blur-sm w-full py-2 px-4">
+    <header className="fixed z-10 backdrop-blur-sm w-full py-2 px-4">
     <div className=' containers flex justify-between sm:justify-around xl:justify-between  items-center '>
       <div className="flex items-center gap-2 sm:gap-7">
         <div className="block xl:hidden">
