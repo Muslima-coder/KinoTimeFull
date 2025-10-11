@@ -154,7 +154,7 @@ const SelectPart = () => {
   return (
     <div className="bg-[#171818]">
         <div className="bg-[#212322] p-5 rounded-lg mb-5">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-3">
             <SelectComponent
               options={genreOptions}
               placeholder="Janr"
@@ -199,7 +199,7 @@ const SelectPart = () => {
             />
           </div>
 
-          <div className="flex items-center gap-[20px] mb-5 mt-2">
+          <div className="flex items-center md:justify-start justify-center gap-[20px] mb-5 mt-2">
             <button
               onClick={() => setToogle(!toogle)}
               className={`py-[7px] px-[12px] rounded-xl flex gap-[10px] items-center text-[#8f9190] cursor-pointer hover:scale-[1.08] duration-500 ${
@@ -222,14 +222,14 @@ const SelectPart = () => {
 
           <button
             onClick={handleClearFilters}
-            className="text-[#908f8e] text-[16px] font-semibold flex items-center gap-[7px] cursor-pointer hover:text-white duration-500"
+            className="text-[#908f8e] md:mx-0 mx-auto text-[16px] font-semibold flex items-center gap-[7px] cursor-pointer hover:text-white duration-500"
           >
             <CloseOutlined /> Filterlarni tozalash
           </button>
         </div>
 
         
-        <div className="flex flex-wrap gap-[20px] justify-between">
+        <div className="flex flex-wrap gap-[20px] justify-center md:justify-between">
           {filteredMovies.length > 0 ? (
             filteredMovies.map((item, index) => (
                <MovieCard

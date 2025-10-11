@@ -78,7 +78,7 @@ const TvPart = () => {
         {/* Swiper */}
         <Swiper
           spaceBetween={10}
-          slidesPerView={6.5}
+          slidesPerView={6}
           navigation
           mousewheel
           cssMode
