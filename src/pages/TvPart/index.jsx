@@ -78,13 +78,13 @@ const TvPart = () => {
         {/* Swiper */}
         <Swiper
           spaceBetween={10}
-          slidesPerView={6}
+          slidesPerView={10}
           navigation
           mousewheel
           cssMode
           modules={[Navigation]}
           >
-        
+        <div className="flex items-center gap-[20px]">
         <SwiperSlide>
           <SearchTextBtn title={"qale"}/>
         </SwiperSlide>
@@ -142,6 +142,7 @@ const TvPart = () => {
         <SwiperSlide>
           <SearchTextBtn title={"qale"}/>
         </SwiperSlide>
+        </div>
             
         </Swiper>
       </div>
