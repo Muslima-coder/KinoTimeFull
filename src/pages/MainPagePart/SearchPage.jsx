@@ -65,12 +65,12 @@ const SearchPage = () => {
           cssMode
           modules={[Navigation]}
           breakpoints={{
-            100: { slidesPerView: 1 },
-            200: { slidesPerView: 2 },
-            300: { slidesPerView: 3 },
-            400: { slidesPerView: 4 },
-            500: { slidesPerView: 5 },
-            600: { slidesPerView: 6 },
+            200: { slidesPerView: 1 },
+            400: { slidesPerView: 2 },
+            700: { slidesPerView: 3 },
+            1000: { slidesPerView: 4 },
+            1300: { slidesPerView: 5 },
+            1600: { slidesPerView: 6 },
           }}   >
 
           {movies.map((movie) => (
