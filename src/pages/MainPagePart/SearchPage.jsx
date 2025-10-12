@@ -57,7 +57,7 @@ const SearchPage = () => {
         </strong>
 
         {/* Swiper */}
-        <Swiper
+        {/* <Swiper
           spaceBetween={10}
           slidesPerView={6}
           navigation
@@ -85,7 +85,40 @@ const SearchPage = () => {
               />
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
+        <Swiper
+  spaceBetween={20} // 10 o‘rniga 20px joy qildik
+  slidesPerView={6}
+  navigation
+  mousewheel
+  cssMode
+  modules={[Navigation]}
+  breakpoints={{
+    0: { slidesPerView: 1, spaceBetween: 12 },    // telefon
+    480: { slidesPerView: 2, spaceBetween: 15 },  // kichik planshet
+    640: { slidesPerView: 3, spaceBetween: 18 },  // o‘rta planshet
+    768: { slidesPerView: 4, spaceBetween: 20 },  // planshet
+    1024: { slidesPerView: 5, spaceBetween: 24 }, // katta ekran
+    1280: { slidesPerView: 6, spaceBetween: 28 }, // desktop
+  }}
+  className="!w-full"
+>
+  {movies.map((movie) => (
+    <SwiperSlide key={movie.id}>
+      <div className="flex justify-center">
+        <MovieCardSearch
+          title={movie.title}
+          poster={movie.poster}
+          year={movie.year}
+          imdbRating={movie.imdbRating}
+          genre={movie.genre}
+          country={movie.country}
+        />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       </div>
     </div>
   );
