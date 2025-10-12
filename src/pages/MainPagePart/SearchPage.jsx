@@ -64,14 +64,7 @@ const SearchPage = () => {
           mousewheel
           cssMode
           modules={[Navigation]}
-          breakpoints={{
-            300: { slidesPerView: 1 },
-            440: { slidesPerView: 2 },
-            708: { slidesPerView: 3 },
-            900: { slidesPerView: 4 },
-            1000: { slidesPerView: 5 },
-            1100: { slidesPerView: 6 },
-          }} >
+         >
 
           {movies.map((movie) => (
             <SwiperSlide  key={movie.id}>
