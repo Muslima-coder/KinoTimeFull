@@ -66,11 +66,11 @@ const SearchPage = () => {
           modules={[Navigation]}
           breakpoints={{
             200: { slidesPerView: 1 },
-            400: { slidesPerView: 2 },
-            700: { slidesPerView: 3 },
-            1000: { slidesPerView: 4 },
-            1300: { slidesPerView: 5 },
-            1600: { slidesPerView: 6 },
+            300: { slidesPerView: 2 },
+            400: { slidesPerView: 3 },
+            500: { slidesPerView: 4 },
+            600: { slidesPerView: 5 },
+            700: { slidesPerView: 6 },
           }}   >
 
           {movies.map((movie) => (
