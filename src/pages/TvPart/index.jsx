@@ -41,7 +41,7 @@ const TvPart = () => {
   //btnla contenti
   const BtnContent = ({title, icon}) => {
     return(
-      <button className="flex items-center gap-5 bg-[#232424] text-[#fffffe] px-7 cursor-pointer duration-500 hover:bg-[#1a201a] py-[16px] rounded-[8px]">
+      <button className="flex items-center gap-5 bg-[#232424] text-[#fffffe] md:px-7 px-[5] cursor-pointer duration-500 hover:bg-[#1a201a] md:py-[16px] py-[10px] rounded-[8px]">
         {icon}
         <div className="xl:flex hidden">{title}</div>
       </button>
