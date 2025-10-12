@@ -81,6 +81,14 @@ const TvPart = () => {
           mousewheel
           cssMode
           modules={[Navigation]}
+          breakpoints={{
+            300: { slidesPerView: 1 },
+            400: { slidesPerView: 2 },
+            600: { slidesPerView: 3 },
+            800: { slidesPerView: 4 },
+            900: { slidesPerView: 5 },
+            1000: { slidesPerView: 6 },
+          }}
           >
         <div className="flex items-center gap-[20px] p-2">
         <SwiperSlide>
