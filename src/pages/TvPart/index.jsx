@@ -59,7 +59,6 @@ const TvPart = () => {
         <h2 className="md:text-[64px] text-[22px] font-bold text-white">Telekanallar</h2>
       </div>
       {/* search input */}
-      {/* <div className="w-full flex items-center justify-between"> */}
        <div className="xl:w-[68%] w-full ">
          <label className="flex items-center justify-between mx-auto py-[16px] px-[24px] rounded-[8px] bg-[#232424]">
           <input autoComplete="off" className="searchInput outline-none text-[16px] text-[rgb(255,255,255)] border-none bg-transparent flex-1" type="text" name="search" placeholder="Tv kanal nomini kiriting" value={searchValue} onChange={handleChange} onKeyDown={handleKeyDown}/>
@@ -72,7 +71,6 @@ const TvPart = () => {
         <BtnContent icon={<TvPartSelectIcon2/>} title={"Radio"}/>
         </div>
 
-      {/* </div> */}
 
       <div className="mt-5 w-full ">
         {/* Swiper */}
@@ -84,9 +82,9 @@ const TvPart = () => {
           cssMode
           modules={[Navigation]}
           >
-        <div className="flex items-center gap-[20px]">
+        <div className="flex items-center gap-[20px] p-2">
         <SwiperSlide>
-          <SearchTextBtn title={"qale"}/>
+          <SearchTextBtn title={"salom alik"}/>
         </SwiperSlide>
         <SwiperSlide>
           <SearchTextBtn title={"qale"}/>
