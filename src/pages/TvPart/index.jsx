@@ -41,7 +41,7 @@ const TvPart = () => {
   //btnla contenti
   const BtnContent = ({title, icon}) => {
     return(
-      <button className="flex items-center gap-5 bg-[#232424] text-[#fffffe] px-[7] cursor-pointer duration-500 hover:bg-[#1a201a] md:py-[16px] py-[12px] rounded-[8px]">
+      <button className="flex items-center gap-5 bg-[#232424] text-[#fffffe] px-[20px] cursor-pointer duration-500 hover:bg-[#1a201a] md:py-[16px] py-[12px] rounded-[8px]">
         {icon}
         <div className="xl:flex hidden">{title}</div>
       </button>
@@ -59,8 +59,8 @@ const TvPart = () => {
         <h2 className="md:text-[64px] text-[22px] font-bold text-white">Telekanallar</h2>
       </div>
       {/* search input */}
-       <div className="xl:w-[68%] w-full ">
-         <label className="flex items-center justify-between mx-auto py-[16px] px-[24px] rounded-[8px] bg-[#232424]">
+       <div className="xl:w-[70%] w-full ">
+         <label className="flex items-center justify-between mx-auto py-[16px] px-[10px] md:px-[24px] rounded-[8px] bg-[#232424]">
           <input autoComplete="off" className="searchInput outline-none text-[16px] text-[rgb(255,255,255)] border-none bg-transparent flex-1" type="text" name="search" placeholder="Tv kanal nomini kiriting" value={searchValue} onChange={handleChange} onKeyDown={handleKeyDown}/>
           <CancelIcon />
         </label>

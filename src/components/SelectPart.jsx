@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SelectComponent from "./SelectComponent";
 import MovieCard from "./MovieCard";
 
-const SelectPart = () => {
+const SelectPart = ({ apiUrl }) => {
   const [toogle, setToogle] = useState(false);
   const [toogle2, setToogle2] = useState(false);
 
@@ -19,14 +19,16 @@ const SelectPart = () => {
 
 
   useEffect(() => {
-    fetch("https://kinotime.world/api/movies?lang=uz")
+    // fetch("https://kinotime.world/api/movies?lang=uz")
+      if (!apiUrl) return; 
+      fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data);
         setFilteredMovies(data);
       })
       .catch((err) => console.error("API xatosi:", err));
-  }, []);
+  }, [apiUrl]);
 
   
   useEffect(() => {
@@ -245,7 +247,7 @@ const SelectPart = () => {
             ))
           ) : (
             <p className="text-white text-center w-full py-10">
-              Hech qanday film topilmadi:(
+              Hech qanday ma'lumot topilmadi :(
             </p>
           )}
         </div>

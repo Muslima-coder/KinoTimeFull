@@ -17,7 +17,7 @@ function Header() {
   { id: 4, text: "Seriallar", to: "/seriallar" },
   { id: 5, text: "Multfilmlar", to: "/multfilmlar" },
   { id: 6, text: "Anime", to: "/anime" },
-  { id: 7, text: "Jonli efir", to: "/jonliefir" },
+  { id: 7, text: "Live", to: "/jonliefir" },
   { id: 8, text: "Tariflar", to: "/tariflar" },
   ];
  
