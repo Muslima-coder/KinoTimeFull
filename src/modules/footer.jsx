@@ -44,7 +44,7 @@ const Footer = () => {
 
         {/* Chap tarafdagi kontent (About Us va Catalog wrapperlari) */}
          <div className=' flex lg:flex-row lg:justify-start justify-center flex-col items-center gap-[70px] lg:mx-0 mx-auto '>
-           <div className='lg:mx-0 mx-auto lg:text-start text-center md:mt-0 mt-3'>
+           <div className='lg:mx-0 mx-auto lg:text-start text-center md:mt-0 mt-5'>
             <Title title={"Biz haqimizda"}/>
             <div className="text-[#868787] font-bold text-[14px] space-y-[3px] flex flex-col ">
               {AboutUsList.map(item => <Content to={item.to} key={item.id} contentText={item.text} />)}
