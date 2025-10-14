@@ -9,7 +9,7 @@ const SerillarPart = () => {
           Bosh sahifa / <span className="!text-[#8b8c8c]">Seriallar</span>
         </p>
       </div>
-    <SelectPart/>
+    <SelectPart apiUrl={"https://kinotime.world/api/serials"}/>
     </div>
   )
 }

@@ -9,7 +9,7 @@ const MultfilmlarPart = () => {
           Bosh sahifa / <span className="!text-[#8b8c8c]">Multfilmlar</span>
         </p>
       </div>
-    <SelectPart/>
+    <SelectPart apiUrl={"kinotime.world/api/cartoons"}/>
     </div>
   )
 }
