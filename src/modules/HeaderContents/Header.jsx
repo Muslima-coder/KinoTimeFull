@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { SearchSvg, PromocodIcon, NotificationIcon, RegisterIcon } from '../assets/icons'
-import { SiteLogoFooter } from '../assets/images'
+import { SearchSvg, PromocodIcon, NotificationIcon, RegisterIcon } from '../../assets/icons'
+import { SiteLogoFooter } from '../../assets/images'
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { ModalHeader, PATH } from "../components";
+import { ModalHeader, PATH } from "../../components";
 
 function Header() {
   const navigate = useNavigate()
@@ -22,8 +22,8 @@ function Header() {
   ];
  
   const ButtonsList = [
-  { id: 1, icon:<PromocodIcon/> },
-  { id: 2, icon:<NotificationIcon/> },
+  { id: 1, to:"/", icon:<PromocodIcon/> },
+  { id: 2, to:PATH.notification, icon:<NotificationIcon/> },
   ]
 
   return (
@@ -41,7 +41,7 @@ function Header() {
 
       <div className='flex gap-2 items-center  '>
         <button onClick={() => navigate('/searchPart')} className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white"><SearchSvg/> </button> 
-        {ButtonsList.map(item => <button key={item.id} className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</button> )}
+        {ButtonsList.map(item => <Link to={item.to} key={item.id} className="flex cursor-pointer justify-center rounded-[12px] items-center sm:w-[53px]  sm:h-[53px]  w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] duration-300 text-white">{item.icon}</Link> )}
 
         <div className="relative">
           <button onClick={() => setOpen(!open)} className=" flex justify-center rounded-[12px] items-center sm:w-[58px]  sm:h-[58px] w-[45px] h-[45px]  bg-[#2a2a29] hover:bg-[#373837] text-white" >

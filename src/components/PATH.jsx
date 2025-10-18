@@ -1,6 +1,8 @@
 const PATH = {
     boshSahifa:"/",
     searchPart:"/searchPart",
+    notification:"/notification",
+    notificationSingle: (id) => `/notification/${id}`,
 
     // NavLinklar
     tv:"/tv",

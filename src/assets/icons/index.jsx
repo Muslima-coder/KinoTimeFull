@@ -179,4 +179,19 @@ export const TariflarIcon4 = () => {
    )
 }
 
-export {TelegramIconF, AppleIcon, TelephoneIcon, SmartTv, GoogleIcon, AppGallery, GallaxyStore, TelegramPage, InstagramPage, FacebookPage, YoutubePage, RefreshIcon, VolumeOfIcon, VolumeOnIcon, ImdbIconF, KinopoiskIcon, ItvIcon}
+function CalendarIcon() {
+	return <svg xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="currentColor"><path d="M14.187 0h-1.064v1.6a.535.535 0 01-1.066 0V0H3.522v1.6a.534.534 0 01-1.066 0V0h-1.07C.587 0 0 .693 0 1.6v1.92h16V1.6c0-.907-.96-1.6-1.813-1.6zM0 4.64v9.761c0 .96.587 1.6 1.44 1.6h12.8c.853 0 1.813-.693 1.813-1.6v-9.76H0zm4.216 8.961h-1.28a.42.42 0 01-.427-.426V11.84a.42.42 0 01.427-.427h1.333a.42.42 0 01.427.427v1.334c-.053.266-.213.426-.48.426zm0-4.8h-1.28a.42.42 0 01-.427-.427V7.041a.42.42 0 01.427-.427h1.333a.42.42 0 01.427.427v1.333c-.053.267-.213.427-.48.427zm4.267 4.8H7.149a.42.42 0 01-.426-.426V11.84a.42.42 0 01.426-.427h1.334a.42.42 0 01.427.427v1.334c0 .266-.16.426-.427.426zm0-4.8H7.149a.42.42 0 01-.426-.427V7.041a.42.42 0 01.426-.427h1.334a.42.42 0 01.427.427v1.333c0 .267-.16.427-.427.427zm4.267 4.8h-1.333a.42.42 0 01-.427-.426V11.84a.42.42 0 01.427-.427h1.333a.42.42 0 01.427.427v1.334c0 .266-.16.426-.427.426zm0-4.8h-1.333a.42.42 0 01-.427-.427V7.041a.42.42 0 01.427-.427h1.333a.42.42 0 01.427.427v1.333c0 .267-.16.427-.427.427z" fillOpacity="0.6" fill="#FFFFFF"></path></svg>
+}
+
+function NextIcon() {
+	return <svg xmlnsXlink="http://www.w3.org/1999/xlink" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.083 1.165L6.917 7l-5.834 5.833" stroke="#FFFFFF" strokeWidth="1.5px" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.6" fill="none"></path></svg>
+}
+
+function SeenIcon(){
+	return <svg xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10.002 12.773a2.771 2.771 0 100-5.542 2.771 2.771 0 000 5.542z" fill="#FFFFFF" fillOpacity="0.6"></path><path d="M18.724 9.233C16.594 6.66 13.369 4.182 10 4.182c-3.37 0-6.595 2.48-8.724 5.051a1.205 1.205 0 000 1.536c.535.646 1.657 1.895 3.156 2.986 3.774 2.747 7.354 2.753 11.136 0 1.499-1.091 2.62-2.34 3.156-2.986a1.205 1.205 0 000-1.536zM10 6.121c2.14 0 3.88 1.74 3.88 3.88 0 2.14-1.74 3.88-3.88 3.88-2.14 0-3.88-1.74-3.88-3.88 0-2.14 1.74-3.88 3.88-3.88z" fill="#FFFFFF" fillOpacity="0.6"></path></svg>
+}
+function SeeIcon(){
+	return <svg xmlnsXlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2 9.229c1.575.91 2.363 1.364 2.627 1.958a2 2 0 010 1.627c-.264.593-1.052 1.048-2.627 1.957l-3.9 2.252c-1.575.91-2.363 1.364-3.01 1.296a2 2 0 01-1.408-.813C7.5 16.98 7.5 16.07 7.5 14.252V9.748c0-1.819 0-2.728.382-3.254a2 2 0 011.409-.813c.646-.068 1.434.387 3.009 1.296l3.9 2.252z" fill="#FFFFFF"></path></svg>
+}
+
+export {TelegramIconF, SeenIcon, SeeIcon, CalendarIcon, NextIcon, AppleIcon, TelephoneIcon, SmartTv, GoogleIcon, AppGallery, GallaxyStore, TelegramPage, InstagramPage, FacebookPage, YoutubePage, RefreshIcon, VolumeOfIcon, VolumeOnIcon, ImdbIconF, KinopoiskIcon, ItvIcon}

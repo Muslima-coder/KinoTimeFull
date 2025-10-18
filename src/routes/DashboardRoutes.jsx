@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import { PATH } from "../components"
-import { Footer, Header } from "../modules"
+import { Footer, Header, Notification, NotificationMovieSingle } from "../modules"
 import { AnimePart, ExpectedMovie, FilmlarPart, Hero, LivePart, MultfilmlarPart, SearchPage, SerillarPart, TariflarPart, TvPart } from "../pages"
 
 const DashboardRoutes = () => {
@@ -15,6 +15,8 @@ const DashboardRoutes = () => {
     {id:7, path:PATH.anime, element:<AnimePart/>},
     {id:8, path:PATH.jonliEfir, element:<LivePart/>},
     {id:9, path:PATH.tariflar, element:<TariflarPart/>},
+    {id:10, path: PATH.notification, element: <Notification />},
+    {id:11, path: `${PATH.notification}/:id`, element: <NotificationMovieSingle />},
   ]
 
   return (
