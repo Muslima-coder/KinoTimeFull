@@ -18,11 +18,11 @@ const NotificationMovieSingle = () => {
       <h1 className="md:text-[30px] text-[20px] text-white font-bold">{item.title}</h1>
       <div className="py-5 flex flex-col md:w-[730px] md:mx-0 mx-auto w-auto gap-5 text-white">
         <div className="flex items-center gap-2">
-          <Link  to={PATH.boshSahifa} className="text-[#FFFFFF] text-[16px] md:text-[18px] font-medium underline">Bosh sahifa /</Link>
-          <Link to={PATH.notification} className="text-white underline text-[16px] md:text-[18px] font-medium ">Xabarnoma /</Link>
-          <p className="text-[#8b8c8c] md:flex hidden text-[16px] md:text-[18px] font-medium">{item.title}</p>
-          <p className="text-[#8b8c8c] md:hidden flex text-[16px] md:text-[18px] font-medium">
-            {item.title.split(" ").slice(0, 4).join(" ") + (item.title.split(" ").length > 4 ? "..." : "")}
+          <Link  to={PATH.boshSahifa} className="text-[#FFFFFF] text-[14px] md:text-[18px] font-medium underline">Bosh sahifa /</Link>
+          <Link to={PATH.notification} className="text-white underline text-[14px] md:text-[18px] font-medium ">Xabarnoma /</Link>
+          <p className="text-[#8b8c8c] md:flex hidden text-[14px] md:text-[18px] font-medium">{item.title}</p>
+          <p className="text-[#8b8c8c] md:hidden flex text-[14px] md:text-[18px] font-medium">
+            {item.title.split(" ").slice(0, 2).join(" ") + (item.title.split(" ").length > 4 ? "..." : "")}
           </p>
 
         </div>
