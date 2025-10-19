@@ -82,9 +82,9 @@ const Footer = () => {
             </LinkBtn>
           </div>
 
-             <div className='flex flex-col '>
+             <div className='flex flex-col sm:text-start text-center'>
               <Title title={"Ilovalar"}/>
-               <div className="flex gap-[10px]">
+               <div className="flex flex-wrap sm:justify-start justify-center gap-[10px]">
                 <div className="flex flex-col gap-[6px]">
                    <LinkBtn linkHref={'#'}>
                      <AppleIcon/>

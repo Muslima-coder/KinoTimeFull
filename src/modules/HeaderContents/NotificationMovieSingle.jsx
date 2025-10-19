@@ -15,8 +15,8 @@ const NotificationMovieSingle = () => {
 
   return (
     <div className="containers pt-25 p-5">
-      <h1 className="md:text-[30px] text-[25px] text-white font-bold">{item.title}</h1>
-      <div className="py-5 flex flex-col md:w-[730px] md:mx-0 mx-auto w-[530px] gap-5 text-white">
+      <h1 className="md:text-[30px] text-[20px] text-white font-bold">{item.title}</h1>
+      <div className="py-5 flex flex-col md:w-[730px] md:mx-0 mx-auto w-auto gap-5 text-white">
         <div className="flex items-center gap-2">
           <Link  to={PATH.boshSahifa} className="text-[#FFFFFF] text-[16px] md:text-[18px] font-medium underline">Bosh sahifa /</Link>
           <Link to={PATH.notification} className="text-white underline text-[16px] md:text-[18px] font-medium ">Xabarnoma /</Link>

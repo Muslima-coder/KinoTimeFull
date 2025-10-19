@@ -33,7 +33,7 @@ function Header() {
         <div className="block xl:hidden">
         <ModalHeader/>
         </div>
-        <Link to={PATH.boshSahifa}><img className="sm:w-[66px] sm:h-[33px] w-[40px] h-[28px]" src={SiteLogoFooter} alt="logo" width={66} height={33} /></Link>
+        <Link to={PATH.boshSahifa}><img className="md:w-[66px] md:h-[33px] w-[40px] h-[28px]" src={SiteLogoFooter} alt="logo" width={66} height={33} /></Link>
         <div className="cursor-pointer text-center hidden xl:flex gap-[14px]">
         {LinkList.map(item => <NavLink key={item.id} to={item.to} className={({ isActive }) => isActive ? "text-white font-normal text-[16px]" : "text-[#878787] hover:text-white duration-300"}>{item.text}</NavLink>)}
         </div>
